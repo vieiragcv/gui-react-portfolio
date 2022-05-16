@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import './App.css';
+/* import './App.css'; */  // not sure if needed
 
 
 function App() {
@@ -16,14 +16,19 @@ function App() {
 
   return (
     <div>
+
       <Header
         projectType={projectType}
         setCurrentProjectType={setCurrentProjectType}
         currentProjectType={currentProjectType}       
       ></Header>
+
       <main>
-        
+
+
+
       </main>
+
     </div>
   );
 }
