@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-/* import './App.css'; */  // not sure if needed
-
+import About from './components/About';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
+import './App.css';
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
   ]);
 
   const [currentProjectType, setCurrentProjectType] = useState(projectType[0]);
+  const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -20,14 +23,27 @@ function App() {
       <Header
         projectType={projectType}
         setCurrentProjectType={setCurrentProjectType}
-        currentProjectType={currentProjectType}       
+        currentProjectType={currentProjectType}   
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}    
       ></Header>
 
       <main>
-
-
+        
+        {!contactSelected ? (
+          <>
+            <About></About>
+          </>
+        ):(
+            <Contact></Contact>
+          )
+        }
 
       </main>
+
+      <Footer>
+
+      </Footer>
 
     </div>
   );

@@ -1,7 +1,8 @@
 main {
-	margin: 0 auto;
+	margin: 1 auto;
 	max-width: 90%;
   padding: 50px 30px;
+
 }
 :root {
   --primary: #54ff76;
@@ -21,8 +22,7 @@ main {
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   min-height: 100%;
 }
 
@@ -39,12 +39,7 @@ body {
 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   margin: 5px 0;
@@ -81,17 +76,18 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--secondary);
 }
 
 header {
-  background: var(--dark);
+  background: var(--darker);
 }
 
 header a {
@@ -128,7 +124,7 @@ span[role="img"] {
 }
 
 form {
-  width: 40%;
+  width: 100%;
 }
 
 input {
@@ -151,10 +147,15 @@ li {
 
 nav a:hover {
   text-decoration: none;
+  color: var(--secondary);
 }
 
-nav  li {
+nav li {
   cursor: pointer;
+}
+
+nav li:hover {
+  color: var(--secondary);
 }
 
 textarea {
@@ -290,7 +291,7 @@ a {
 }
 
 .navActive {
-  color: var(--secondary);
+  color: var(--primary);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
