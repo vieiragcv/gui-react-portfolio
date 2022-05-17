@@ -8,18 +8,20 @@ function About() {
   return(
 
     <section className="my-5 container">
-      <div className="flex-row card">
-        <h1 id="about">Guilherme Vieira</h1>
+      <div className="card">
+        
         <img src={aboutImage} className="my-2" style={{ width: "auto" }} alt="headshot"></img>
       </div>
-      <div>
+
+      <div className="card">
         <p>Certificates: Project Management Professional (PMP), UM Full Stack Web Development</p>
-        <a href="https://www.linkedin.com/in/vieiragui25/"><p>LinkedIn</p></a>
-        <a href="https://github.com/vieiragcv"><p>GitHub</p></a>
       </div>
-      <p>Seasoned Product/Project Manager with experience in start-ups and large corporations. 
-        Passionate in new technologies and data-driven processes capable of improving communication 
-        transparency and reliability on performance metrics. </p>
+
+      <div className="">
+        <p>Seasoned Product/Project Manager with experience in start-ups and large corporations. 
+          Passionate in new technologies and data-driven processes capable of improving communication 
+          transparency and reliability on performance metrics. </p>
+      </div>
 
     </section>
   );
