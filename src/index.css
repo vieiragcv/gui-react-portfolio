@@ -70,6 +70,23 @@ li {
   list-style: none;
 }
 
+/* .project-box {
+  position: relative;
+  max-width: 45%;
+} */
+
+.full-box {
+  position: static;
+  max-width: 100%;
+}
+
+/* #project-1, #project-3, #project-5  {
+  float: left;
+}
+#project-2, #project-4, #project-6 {
+  float: right;
+}
+ */
 /* ------------------------------------------------
 -                  SIZING & FONT
 -------------------------------------------------*/
@@ -324,7 +341,6 @@ button {
 	margin-bottom: 30px;
 	padding: 10px 15px;	
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
