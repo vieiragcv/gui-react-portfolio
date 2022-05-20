@@ -39,8 +39,7 @@ function Project() {
         <div className ="project-box" id="project-6">
           <a href="https://vieiragcv.github.io/code-quiz/"><img src={ proj6Image } className="" style= {{ width: "auto" }} alt="proj6" ></img></a>
         </div>
-
-
+        
       </div>
 
 

@@ -6,8 +6,8 @@ main {
 	margin: 1 auto;
 	max-width: 90%;
   padding: 50px 30px;
-
 }
+
 :root {
   --primary: #54ff76;
   --secondary: #edf347;
@@ -47,11 +47,57 @@ body {
 -------------------------------------------------*/
 
 .container {
-  width: 85%;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
+
+#project-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.project-2 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+}
+.project-3 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+}
+.project-4 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+} 
+.project-5 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+}
+.project-6 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+}
+
+
 
 .flex-row {
   display: flex;
@@ -80,13 +126,7 @@ li {
   max-width: 100%;
 }
 
-/* #project-1, #project-3, #project-5  {
-  float: left;
-}
-#project-2, #project-4, #project-6 {
-  float: right;
-}
- */
+
 /* ------------------------------------------------
 -                  SIZING & FONT
 -------------------------------------------------*/
@@ -128,9 +168,7 @@ a {
   color: var(--primary);
   text-decoration: none;
   font-weight: bold;
-	
 }
-
 
 a:hover {
   text-decoration: underline;
@@ -200,16 +238,16 @@ img {
   max-width: 100%;
 }
 
-.img-thumbnail {
+/* .img-thumbnail {
   width: auto;
   height: 300px;
   margin-bottom: 50px;
   cursor: pointer;
-}
+} */
 
-span[role="img"] {
+/* span[role="img"] {
   cursor: default;
-}
+} */
 
 
 /* ------------------------------------------------
