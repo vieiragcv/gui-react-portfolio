@@ -14,33 +14,33 @@ function Project() {
   return(
     <div className="container">
 
-      <div className="row">
 
-        <div className ="project-box col" id="project-1">
-          <a href="https://vieiragcv.github.io/run-buddy/"><img src={ proj1Image } className="" style= {{ width: "auto" }} alt="proj1"></img> </a>
+
+        <div className ="" id="project-1">
+          <a href="https://vieiragcv.github.io/run-buddy/"><img src={ proj1Image } className=""  alt="proj1"></img> </a>
         </div>
 
-        <div className ="project-box col" id="project-2">
-          <a href="https://vieiragcv.github.io/la-cocina-g/"> <img src={ proj2Image } className="" style= {{ width: "auto" }} alt="proj2" ></img></a>
+        <div className ="" id="project-2">
+          <a href="https://vieiragcv.github.io/la-cocina-g/"> <img src={ proj2Image } className=""  alt="proj2" ></img></a>
         </div>
 
-        <div className ="project-box" id="project-3">
-          <a href="https://vieiragcv.github.io/note-taker/"><img src={ proj3Image } className="" style= {{ width: "auto" }} alt="proj3" ></img></a>
+        <div className ="" id="project-3">
+          <a href="https://vieiragcv.github.io/note-taker/"><img src={ proj3Image } className=""  alt="proj3" ></img></a>
         </div>  
 
-        <div className ="project-box" id="project-4">
-          <a href="https://vieiragcv.github.io/project-1-team-8/"><img src={ proj4Image } className="" style= {{ width: "auto" }} alt="proj4" ></img> </a>
+        <div className ="" id="project-4">
+          <a href="https://vieiragcv.github.io/project-1-team-8/"><img src={ proj4Image } className=""  alt="proj4" ></img> </a>
         </div>
 
-        <div className ="project-box"id="project-5">
-          <a href="https://vieiragcv.github.io/weather-dashboard/"><img src={ proj5Image } className="" style= {{ width: "auto" }} alt="proj5" ></img></a>
+        <div className =""id="project-5">
+          <a href="https://vieiragcv.github.io/weather-dashboard/"><img src={ proj5Image } className=""  alt="proj5" ></img></a>
         </div>
 
-        <div className ="project-box" id="project-6">
-          <a href="https://vieiragcv.github.io/code-quiz/"><img src={ proj6Image } className="" style= {{ width: "auto" }} alt="proj6" ></img></a>
+        <div className ="" id="project-6">
+          <a href="https://vieiragcv.github.io/code-quiz/"><img src={ proj6Image } className=""  alt="proj6" ></img></a>
         </div>
         
-      </div>
+
 
 
     </div> 

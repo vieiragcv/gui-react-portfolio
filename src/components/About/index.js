@@ -8,7 +8,7 @@ function About() {
 
   return(
 
-  <div className="container">
+  <div className="">
     <section className="">
 
       <div className="">
