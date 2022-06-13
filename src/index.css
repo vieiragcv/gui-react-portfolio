@@ -1,9 +1,13 @@
+/* ------------------------------------------------
+-                      MAIN
+-------------------------------------------------*/
+
 main {
 	margin: 1 auto;
 	max-width: 90%;
   padding: 50px 30px;
-
 }
+
 :root {
   --primary: #54ff76;
   --secondary: #edf347;
@@ -15,7 +19,6 @@ main {
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
-
 }
 
 * {
@@ -39,8 +42,98 @@ body {
 
 }
 
+/* ------------------------------------------------
+-                     FORMATTING
+-------------------------------------------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+/* .project-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.project-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+} */
+/* .project-3 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+}
+.project-4 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+} 
+.project-5 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+}
+.project-6 {
+  grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ;
+
+} */
+
+
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+/* .project-box {
+  position: relative;
+  max-width: 45%;
+} */
+
+.full-box {
+  position: static;
+  max-width: 100%;
+}
+
+
+/* ------------------------------------------------
+-                  SIZING & FONT
+-------------------------------------------------*/
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -48,34 +141,31 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   font-size: 2.25rem;
-}
-
-h2 {
+} h2 {
   font-size: 2rem;
-}
-
-h3 {
+} h3 {
   font-size: 1.75rem;
-}
-
-h4 {
+} h4 {
   font-size: 1.5rem;
-}
-
-h5 {
+} h5 {
   font-size: 1.25rem;
-}
-
-h6 {
+} h6 {
   font-size: 1rem;
+} p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
-p {
-  font-size: 1.1rem;
-  margin-top: 0;
-}
+/* ------------------------------------------------
+-                     ANCHORS
+-------------------------------------------------*/
 
 a {
+	border-radius: 5px;
+	font-weight: 600;
+	padding: 2px 4px;
+	margin-left: -2px;
+	margin-right: -2px;
   color: var(--primary);
   text-decoration: none;
   font-weight: bold;
@@ -86,6 +176,10 @@ a:hover {
   color: var(--secondary);
 }
 
+/* ------------------------------------------------
+-                  HEADER & NAVBAR
+-------------------------------------------------*/
+
 header {
   background: var(--darker);
 }
@@ -93,6 +187,27 @@ header {
 header a {
   color: var(--light);
 }
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+nav li {
+  cursor: pointer;
+}
+
+nav li:hover {
+  color: var(--secondary);
+}
+
+.navActive {
+  color: var(--primary);
+}
+
+/* ------------------------------------------------
+-                     BUTTONS
+-------------------------------------------------*/
 
 button {
   font-size: 1rem;
@@ -108,6 +223,7 @@ button {
 
 button:hover {
   opacity: .8;
+  background-color: var(--tertiary);
 }
 
 button[disabled] {
@@ -115,16 +231,33 @@ button[disabled] {
   opacity: .8;
 }
 
+/* ------------------------------------------------
+-                     IMAGES
+-------------------------------------------------*/
+
 img {
   max-width: 100%;
 }
 
-span[role="img"] {
+/* .img-thumbnail {
+  width: auto;
+  height: 300px;
+  margin-bottom: 50px;
+  cursor: pointer;
+} */
+
+/* span[role="img"] {
   cursor: default;
-}
+} */
+
+
+/* ------------------------------------------------
+-                     FORMS
+-------------------------------------------------*/
 
 form {
-  width: 100%;
+  width: 20%;
+  justify-content: center;
 }
 
 input {
@@ -141,49 +274,16 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
-li {
-  list-style: none;
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: var(--secondary);
-}
-
-nav li {
-  cursor: pointer;
-}
-
-nav li:hover {
-  color: var(--secondary);
-}
-
 textarea {
-	width: 600px;
+	width: 205px;
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
 }
 
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
+/* ------------------------------------------------
+-                       MARGINS 
+-------------------------------------------------*/
 
 .mx-1 {
   margin-right: var(--spacing-one);
@@ -210,6 +310,10 @@ textarea {
   margin-bottom: var(--spacing-five);
 }
 
+/* ------------------------------------------------
+-                      PADDING 
+-------------------------------------------------*/
+
 .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
@@ -235,12 +339,9 @@ textarea {
   text-align: center;
 }
 
-.img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
+/* ------------------------------------------------
+-                   MODAL
+-------------------------------------------------*/
 
 .modalBackdrop {
 	background: rgba(0, 0, 0, .65);
@@ -280,20 +381,20 @@ button {
 	padding: 10px 15px;	
 }
 
-a {
-	border-radius: 5px;
-	color: var(--primary);
-	font-weight: 600;
-	padding: 2px 4px;
-	margin-left: -2px;
-	margin-right: -2px;
-	
-}
-
-.navActive {
-  color: var(--primary);
-}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* ------------------------------------------------
+-                      FOOTER 
+-------------------------------------------------*/
+
+.footer {
+  position: fixed;
+  background-color: rgb(126, 125, 125);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

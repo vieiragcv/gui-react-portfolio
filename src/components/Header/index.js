@@ -3,10 +3,9 @@
 ------------------------------------------------------------*/
 
 import { useEffect } from "react";
-import {capitalizeFirstLetter} from '../../utils/helper';
+import { capitalizeFirstLetter } from '../../utils/helper';
 
-
-function Header(props) {
+function Header (props) {
 
   const {
     projectType = [],
@@ -21,7 +20,6 @@ function Header(props) {
   }, [currentProjectType]);
 
   return (
-
     <header className="flex-row px-1">
 
       <h2>
@@ -37,7 +35,8 @@ function Header(props) {
         contactSelected={contactSelected} 
         setContactSelected={setContactSelected}
       >
-        <ul className="flex-row">
+
+        <ul className="flex-row px-1">
 
 {/*------------------------------------- ABOUT ME -------------------------------------*/}
 
@@ -75,9 +74,7 @@ function Header(props) {
 
           <li className="mx-2">
             <a href="#resume">Resume</a>
-          </li>
-
-          
+          </li> 
         </ul>
       </nav>
     </header>

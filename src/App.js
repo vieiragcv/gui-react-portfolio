@@ -3,15 +3,14 @@ import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import './App.css';
+import Project from './components/Project';
 
 function App() {
 
   const [projectType] = useState([
-    { name: 'JavaScript', description: 'pure js projects' },
-    { name: 'NoSQL', description: 'NoSQL projects' },
-    { name: 'Node/js', description: 'node/js focused' },
-    { name: 'mySQL', description: 'mySQL focused' },
+    { name: 'Coding', description: 'Coding Experience' },
+    { name: 'PM Experience', description: 'Project Management Experience' },
+    { name : 'IP', desription: 'Intellectual Property developed'}
   ]);
 
   const [currentProjectType, setCurrentProjectType] = useState(projectType[0]);
@@ -19,32 +18,31 @@ function App() {
 
   return (
     <div>
-
       <Header
         projectType={projectType}
         setCurrentProjectType={setCurrentProjectType}
         currentProjectType={currentProjectType}   
         contactSelected={contactSelected}
-        setContactSelected={setContactSelected}    
+        setContactSelected={setContactSelected} 
       ></Header>
 
       <main>
-        
         {!contactSelected ? (
           <>
+          <div>
             <About></About>
+          </div>
+          <div>
+            <Project></Project>
+          </div>
           </>
         ):(
             <Contact></Contact>
           )
         }
-
       </main>
 
-      <Footer>
-
-      </Footer>
-
+      <Footer></Footer>
     </div>
   );
 }
