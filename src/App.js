@@ -17,9 +17,7 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
-
     <div>
-
       <Header
         projectType={projectType}
         setCurrentProjectType={setCurrentProjectType}
@@ -29,7 +27,6 @@ function App() {
       ></Header>
 
       <main>
-        
         {!contactSelected ? (
           <>
           <div>
@@ -43,13 +40,9 @@ function App() {
             <Contact></Contact>
           )
         }
-
       </main>
 
-      <Footer>
-
-      </Footer>
-
+      <Footer></Footer>
     </div>
   );
 }
