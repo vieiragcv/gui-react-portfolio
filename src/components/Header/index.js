@@ -8,16 +8,14 @@ import { capitalizeFirstLetter } from '../../utils/helper';
 function Header (props) {
 
   const {
-    projectType = [],
-    setCurrentProjectType,
-    currentProjectType,
-    contactSelected,
-    setContactSelected
+    navItem = [],
+    setCurrentNavItem,
+    currentNavItem,
   } = props;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentProjectType.name);
-  }, [currentProjectType]);
+  useEffect(() => {    // CHANGES TITLE ON CHROME TAB
+    document.title = capitalizeFirstLetter(currentNavItem.name);
+  }, [currentNavItem]);
 
   return (
     <header className="flex-row px-1">
@@ -29,52 +27,25 @@ function Header (props) {
       </h2>
 
       <nav
-        projectType={projectType}
-        setCurrentProjectType={setCurrentProjectType}
-        currentProjectType={currentProjectType}
-        contactSelected={contactSelected} 
-        setContactSelected={setContactSelected}
+        navItem={navItem}
+        setCurrentNavItem={setCurrentNavItem}
+        currentNavItem={currentNavItem}
       >
-
         <ul className="flex-row px-1">
-
-{/*------------------------------------- ABOUT ME -------------------------------------*/}
-
-          <li className={`mx-2 ${ contactSelected && 'navActive'}`}>
-            <a href="#about" onClick = {() => setContactSelected(false)}>About Me</a>
-          </li>
-
-{/*------------------------------------- Portfolio -------------------------------------*/}
-
-          {projectType.map((type) => (
+          {navItem.map((type) => (
             <li
-              className = {`mx-1 ${
-                currentProjectType.name === type.name && 'navActive'
-              }`}
+              className = {`mx-1 ${currentNavItem.name === type.name && 'navActive'}`}
               key={type.name}
             >
               <span
                 onClick = { () => {
-                  setCurrentProjectType(type);
-                  setContactSelected(false);
+                  setCurrentNavItem(type);
                 }}
               >
                 {capitalizeFirstLetter(type.name)}
               </span>
             </li>
-          ))}
-
-{/*------------------------------------- Contact -------------------------------------*/}
-
-          <li>
-            <span onClick={() => setContactSelected(true)}>  Contact</span>
-          </li>
-         
-{/*------------------------------------- Resume -------------------------------------*/}
-
-          <li className="mx-2">
-            <a href="#resume">Resume</a>
-          </li> 
+          ))}   
         </ul>
       </nav>
     </header>

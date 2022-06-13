@@ -7,42 +7,74 @@ import Project from './components/Project';
 
 function App() {
 
-  const [projectType] = useState([
-    { name: 'Coding', description: 'Coding Experience' },
-    { name: 'PM Experience', description: 'Project Management Experience' },
-    { name : 'IP', desription: 'Intellectual Property developed'}
+  const [navItem] = useState([
+    { name: 'About Me', description: 'Brief summary about myself'},
+    { name: 'Product Development', description: 'Coding Experience' },
+    { name: 'Project Management', description: 'Project Management Experience' },
+    { name: 'Contact', description: 'Contact me form'},
+    { name: 'Resume', description: 'Download my full resume'}
   ]);
 
-  const [currentProjectType, setCurrentProjectType] = useState(projectType[0]);
-  const [contactSelected, setContactSelected] = useState(false);
-
+  const [currentNavItem, setCurrentNavItem] = useState(navItem[0]);
+  
   return (
     <div>
+
       <Header
-        projectType={projectType}
-        setCurrentProjectType={setCurrentProjectType}
-        currentProjectType={currentProjectType}   
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected} 
+        navItem={navItem}
+        setCurrentNavItem={setCurrentNavItem}
+        currentNavItem={currentNavItem} 
       ></Header>
 
       <main>
-        {!contactSelected ? (
+        {currentNavItem.name === 'About Me' && 
           <>
           <div>
             <About></About>
           </div>
+
+          </>
+        }
+        {currentNavItem.name === 'Coding' &&
+          <>
           <div>
             <Project></Project>
           </div>
           </>
-        ):(
+        }
+        {currentNavItem.name === 'Project Management' &&
+          <>
+          <div>
+            <p>Project Management</p>
+          </div>
+          </>
+        }
+        {currentNavItem.name === 'IP' &&
+          <>
+          <div>
+            <p>IP</p>
+          </div>
+          </>
+        }
+        {currentNavItem.name === 'Contact' &&
+          <>
+          <div>
             <Contact></Contact>
-          )
+          </div>
+          </>
+        }
+        {currentNavItem.name === 'Resume' &&
+          <>
+          <div>
+            <p>Resume</p>
+          </div>
+          </>
         }
       </main>
 
-      <Footer></Footer>
+      <Footer
+      ></Footer>
+      
     </div>
   );
 }
